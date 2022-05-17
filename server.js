@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 // DRINKS ROUTE
 app.get('/drinks', (req, res) => {
-    res.render('drinks_index.ejs')
+    res.render('drinks_index.ejs', { drinks })
 })
 
 app.listen(port, () => {
