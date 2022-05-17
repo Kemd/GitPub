@@ -41,3 +41,6 @@ const drinks = [
       image: "https://i.imgur.com/MbVdwZz",
     },
   ]
+
+  // display drinks data as Json
+  module.exports = drinks
