@@ -13,12 +13,14 @@ app.get('/', (req, res) => {
 
 // DRINKS ROUTE
 app.get('/drinks', (req, res) => {
-    res.render('drinks_index.ejs', { drinks })
+    res.render('drinks_index.ejs', {  drinks })
 })
 
 // SHOW ROUTE
 app.get('/drinks/:id', (req, res) => {
-    res.send(drinks[req.params.id])
+    res.render('drinks_show.ejs', {
+        drink: drinks[req.params.id]
+    })
 })
 
 app.listen(port, () => {
