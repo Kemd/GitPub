@@ -21,8 +21,10 @@
         
         <ul>
             <li>
-    
-                <%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %>
+                <a href="/drinks/<%= drinks.indexOf(drink) %>">
+
+                    <%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %>
+                </a>
             </li>
         </ul>
     <% }) %>
