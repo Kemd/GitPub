@@ -16,6 +16,11 @@ app.get('/drinks', (req, res) => {
     res.render('drinks_index.ejs', { drinks })
 })
 
+// SHOW ROUTE
+app.get('/drinks/:id', (req, res) => {
+    res.send(req.params.id)
+})
+
 app.listen(port, () => {
     console.log('Listening on port', port)
 })
