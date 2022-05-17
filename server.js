@@ -1,6 +1,6 @@
 // CONSTANTS
 const express = require('express')
-const res = require('express/lib/response')
+const drinks = require('./models/drinks')
 
 const app = express()
 
@@ -9,6 +9,11 @@ const port = 3000
 // Routes
 app.get('/', (req, res) => {
     res.send('Welcome to the Gitpub App!')
+})
+
+// DRINKS ROUTE
+app.get('/drinks', (req, res) => {
+    res.send(drinks)
 })
 
 app.listen(port, () => {
